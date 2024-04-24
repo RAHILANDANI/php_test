@@ -1,6 +1,6 @@
 <?php
 
-class API_user {
+class API {
     public $HOSTNAME = "127.0.0.1";
     public $USERNAME = "root";
     public $PASSWORD = "";
@@ -12,36 +12,36 @@ class API_user {
         $this->conection = mysqli_connect($this->HOSTNAME,$this->USERNAME,$this->PASSWORD,$this->DATABASE);
     }
 
-    public function adduser($name,$age) {
+    public function addBooking($name,$age,$foo,$too) {
 
-        $sql = "INSERT INTO user (name,age) VALUES('$name',$age)";
+        $sql = "INSERT INTO railwayy (name,age,from,to) VALUES('$name',$age,'$foo','$too')";
 
         $res = mysqli_query($this->conection, $sql);
 
         return $res;
     }
 
-    public function fetchAllUser() {
+    public function fetchAllBooking() {
 
-        $sql = "SELECT * FROM user";
+        $sql = "SELECT * FROM railway";
 
         $res = mysqli_query($this->conection,$sql);
 
         return $res;
     }
     
-    public function updateuser($name,$age,$id) {
+    public function updateBooking($name,$age,$foo,$too,$id) {
 
-        $sql = "UPDATE user SET name='$name',age=$age, WHERE id=$id";
+        $sql = "UPDATE railwayy SET name='$name',age=$age,from='$foo',to='$too' WHERE id=$id";
 
         $res = mysqli_query($this->conection,$sql);
         
         return $res;
     }
 
-    public function deleteuser($id) {
+    public function deleteBooking($id) {
         
-        $sql = "DELETE FROM user WHERE id=$id";
+        $sql = "DELETE FROM railwayy WHERE id=$id";
 
         $res = mysqli_query($this->conection,$sql);
 

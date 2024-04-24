@@ -5,7 +5,7 @@
     header('Access-Control-Allow-Method: POST');
     header('Content-Type: application/json');
 
-    $api = new API_user();
+    $api = new API();
 
     if($_SERVER['REQUEST_METHOD'] == "PATCH" || $_SERVER['REQUEST_METHOD'] == "PUT") {
 
@@ -14,16 +14,17 @@
         $id = $_PATCH['id'];
         $name = $_PATCH['name'];
         $age = $_PATCH['age'];
-       
+        $foo = $_PATCH['from'];
+        $too = $_PATCH['to'];
 
-        $res = $api->updateuser($name,$age,$id);
+        $res = $api->updateBooking($name,$age,$foo,$too,$id);
 
         if($res) {
-            $status['status'] = "User updated Successfully...";
+            $status['status'] = "Ticket updated Successfully...";
 
             echo json_encode($status);
         } else {
-            $status['status'] = "User Updation Failed...";
+            $status['status'] = "Ticket Updation Failed...";
 
             echo json_encode($status);
         }
