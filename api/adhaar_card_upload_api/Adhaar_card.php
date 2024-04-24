@@ -4,7 +4,7 @@ class AdhaarCard {
     public $HOSTNAME = "127.0.0.1";
     public $USERNAME = "root";
     public $PASSWORD = "";
-    public $DATABASE = "student";
+    public $DATABASE = "Adharcard";
     public $conection = false;
 
     public function __construct()

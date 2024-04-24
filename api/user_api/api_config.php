@@ -4,7 +4,7 @@ class API_user {
     public $HOSTNAME = "127.0.0.1";
     public $USERNAME = "root";
     public $PASSWORD = "";
-    public $DATABASE = "student";
+    public $DATABASE = "user";
     public $conection = false;
 
     public function __construct()
