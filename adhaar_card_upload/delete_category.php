@@ -5,7 +5,7 @@
     header('Access-Control-Allow-Method: POST');
     header('Content-Type: application/json');
 
-    $category = new Category();
+    $category = new AdhaarCard();
 
     if($_SERVER['REQUEST_METHOD'] == "POST") {
         

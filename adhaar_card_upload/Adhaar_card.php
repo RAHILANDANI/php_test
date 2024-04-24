@@ -1,6 +1,6 @@
 <?php
 
-class Category {
+class AdhaarCard {
     public $HOSTNAME = "127.0.0.1";
     public $USERNAME = "root";
     public $PASSWORD = "";
@@ -12,9 +12,9 @@ class Category {
         $this->conection = mysqli_connect($this->HOSTNAME,$this->USERNAME,$this->PASSWORD,$this->DATABASE);
     }
 
-    public function addNewCategory($name,$image) {
+    public function addUserPersonalDetail($name,$image) {
 
-        $sql = "INSERT INTO category (name,image) VALUES('$name','$image')";
+        $sql = "INSERT INTO user_detail (name,image) VALUES('$name','$image')";
 
         $res = mysqli_query($this->conection, $sql);
 
@@ -23,25 +23,18 @@ class Category {
 
     public function fetchSingleData($id) {
 
-        $sql = "SELECT * FROM category WHERE id=$id";
+        $sql = "SELECT * FROM user_detail WHERE id=$id";
 
         $res = mysqli_query($this->conection,$sql);
 
         return $res;
     }
     
-    // public function updateStudentData($name,$age,$course,$id) {
-
-    //     $sql = "UPDATE detail_of_student SET name='$name',age=$age,course='$course' WHERE id=$id";
-
-    //     $res = mysqli_query($this->conection,$sql);
-        
-    //     return $res;
-    // }
+    
 
     public function deleteRecord($id) {
         
-        $sql = "DELETE FROM category WHERE id=$id";
+        $sql = "DELETE FROM user_detail WHERE id=$id";
 
         $res = mysqli_query($this->conection,$sql);
 

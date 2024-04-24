@@ -5,7 +5,7 @@
     header('Access-Control-Allow-Method: POST');
     header('Content-Type: application/json');
 
-    $category = new Category();
+    $category = new AdhaarCard();
 
     if($_SERVER['REQUEST_METHOD'] == "POST") {
         
@@ -19,12 +19,12 @@
 
         if(move_uploaded_file($categoryPath,$path)) {
 
-            $res = $category->addNewCategory($name,$category_name);
+            $res = $category->addUserPersonalDetail($name,$category_name);
 
             if($res) {
-                $message['msg'] = "Category Insertion successfully...";
+                $message['msg'] = "Person Detail Inserted successfully...";
             } else {
-                $message['msg'] = "Category Insertion failed...";
+                $message['msg'] = "Person Detail Insertion failed...";
             }
 
             echo json_encode($message);
