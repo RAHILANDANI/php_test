@@ -13,7 +13,7 @@
 
         $id = $_DELETE['id'];
 
-        $res = $api->deleteStudentRecord($id);
+        $res = $api->deleteBooking($id);
 
         if($res) {
             $status['status'] = "Student Record Deleted Successfully...";

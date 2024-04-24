@@ -10,9 +10,10 @@
     if($_SERVER['REQUEST_METHOD'] == "POST") {
         $name = $_POST['name'];
         $age = $_POST['age'];
-        $course = $_POST['course'];
+        $foo = $_POST['from'];
+        $too = $_POST['to'];
 
-        $res = $api->addStudentData($name,$age,$course);
+        $res = $api->addBooking($name,$age,$foo,$too);
 
         if($res) {
 

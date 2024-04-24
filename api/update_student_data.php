@@ -14,16 +14,17 @@
         $id = $_PATCH['id'];
         $name = $_PATCH['name'];
         $age = $_PATCH['age'];
-        $course = $_PATCH['course'];
+        $foo = $_PATCH['from'];
+        $too = $_PATCH['to'];
 
-        $res = $api->updateStudentData($name,$age,$course,$id);
+        $res = $api->updateBooking($name,$age,$foo,$too,$id);
 
         if($res) {
-            $status['status'] = "Student Record Updated Successfully...";
+            $status['status'] = "Ticket updated Successfully...";
 
             echo json_encode($status);
         } else {
-            $status['status'] = "Student Record Updation Failed...";
+            $status['status'] = "Ticket Updation Failed...";
 
             echo json_encode($status);
         }

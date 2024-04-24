@@ -8,7 +8,7 @@
     $api = new API();
 
     if($_SERVER['REQUEST_METHOD'] == 'GET') {
-        $res = $api->fetchAllStudentData();
+        $res = $api->fetchAllBooking();
 
         $allrecords = [];
         $i = 0;

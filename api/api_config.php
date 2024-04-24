@@ -12,36 +12,36 @@ class API {
         $this->conection = mysqli_connect($this->HOSTNAME,$this->USERNAME,$this->PASSWORD,$this->DATABASE);
     }
 
-    public function addStudentData($name,$age,$course) {
+    public function addBooking($name,$age,$foo,$too) {
 
-        $sql = "INSERT INTO detail_of_student (name,age,course) VALUES('$name',$age,'$course')";
+        $sql = "INSERT INTO railwayy (name,age,from,to) VALUES('$name',$age,'$foo','$too')";
 
         $res = mysqli_query($this->conection, $sql);
 
         return $res;
     }
 
-    public function fetchAllStudentData() {
+    public function fetchAllBooking() {
 
-        $sql = "SELECT * FROM detail_of_student";
+        $sql = "SELECT * FROM railway";
 
         $res = mysqli_query($this->conection,$sql);
 
         return $res;
     }
     
-    public function updateStudentData($name,$age,$course,$id) {
+    public function updateBooking($name,$age,$foo,$too,$id) {
 
-        $sql = "UPDATE detail_of_student SET name='$name',age=$age,course='$course' WHERE id=$id";
+        $sql = "UPDATE railwayy SET name='$name',age=$age,from='$foo',to='$too' WHERE id=$id";
 
         $res = mysqli_query($this->conection,$sql);
         
         return $res;
     }
 
-    public function deleteStudentRecord($id) {
+    public function deleteBooking($id) {
         
-        $sql = "DELETE FROM detail_of_student WHERE id=$id";
+        $sql = "DELETE FROM railwayy WHERE id=$id";
 
         $res = mysqli_query($this->conection,$sql);
 
