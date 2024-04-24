@@ -5,7 +5,7 @@
     header('Access-Control-Allow-Method: POST');
     header('Content-Type: application/json');
 
-    $api = new API_user();
+    $api = new API_booked();
 
     if($_SERVER['REQUEST_METHOD'] == "DELETE") {
 
@@ -13,7 +13,7 @@
 
         $id = $_DELETE['id'];
 
-        $res = $api->deleteuser($id);
+        $res = $api->deleteticket($id);
 
         if($res) {
             $status['status'] = "User Record Deleted Successfully...";

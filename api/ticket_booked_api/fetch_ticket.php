@@ -5,10 +5,10 @@
     header('Access-Control-Allow-Method: POST');
     header('Content-Type: application/json');
 
-    $api = new API_user();
+    $api = new API_booked();
 
     if($_SERVER['REQUEST_METHOD'] == 'GET') {
-        $res = $api->fetchAllUser();
+        $res = $api->fetchticket();
 
         $allrecords = [];
         $i = 0;
