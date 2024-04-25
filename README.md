@@ -20,6 +20,5 @@
 4) Fetch API: This API is used to retrieve a single railway ticket booking from the system. It takes the following parameter:
       id: The unique ID of the ticket booking to be fetched.
 6) FetchAll API: This API is used to retrieve all railway ticket bookings from the system. It does not take any parameters.
-![Screenshot (112)](https://github.com/RAHILANDANI/php_test/assets/110651901/e6ef815e-715c-4675-9a53-0dba2a191a20)
 ![Screenshot (113)](https://github.com/RAHILANDANI/php_test/assets/110651901/e52191d7-a88e-4a5f-8960-4535946df0c8)
 ![Screenshot (114)](https://github.com/RAHILANDANI/php_test/assets/110651901/5bef2363-8e1a-4b48-8453-3b9e9689de48)
